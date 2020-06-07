@@ -57,11 +57,11 @@ extension OnboardingProvinceVM: ViewModelWithLocalState {
     self.currentProvince = currentProvince
 
     let provinceItems = selectedRegion.provinces
-      .sorted { $0.humanReadableName < $1.humanReadableName }
+      .sorted { L10n.tr("Localizable", "province." + $0.rawValue) < L10n.tr("Localizable", "province." + $1.rawValue) }
       .map {
         OnboardingProvinceVM.CellType.radio(
           provinceIdentifier: $0.rawValue,
-          provinceName: $0.humanReadableName,
+          provinceName: L10n.tr("Localizable", "province." + $0.rawValue),
           isSelected: $0 == currentProvince
         )
       }

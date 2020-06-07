@@ -198,8 +198,8 @@ extension OnboardingRegionView: UICollectionViewDelegateFlowLayout {
     guard
       let model = model,
       let cell = model.items[safe: indexPath.row],
-      case OnboardingRegionVM.CellType.radio(let regionName, let isSelected) = cell,
-      let region = Region(rawValue: regionName)
+      case OnboardingRegionVM.CellType.radio(let regionIdentifier, _, let isSelected) = cell,
+      let region = Region(rawValue: regionIdentifier)
       else {
         return
     }

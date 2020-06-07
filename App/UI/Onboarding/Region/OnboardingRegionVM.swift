@@ -54,9 +54,17 @@ extension OnboardingRegionVM: ViewModelWithLocalState {
     self.isHeaderVisible = isHeaderVisible
     self.isUpdatingRegion = isUpdatingRegion
 
+//    print(Region.allCases.sorted())
+//    print(L10n.Province.bolzano, L10n.Region.trentinoAltoAdige)
+//    print(Region.trentinoAltoAdige, Region.trentinoAltoAdige.localizedText, Region.trentinoAltoAdige.rawValue)
+
     let regionItems = Region.allCases
       .sorted().map {
-        OnboardingRegionVM.CellType.radio(regionName: $0.rawValue, isSelected: $0 == currentRegion)
+        OnboardingRegionVM.CellType.radio(
+          regionIdentifier: $0.rawValue,
+          regionName: L10n.tr("Localizable", "region." + $0.rawValue),
+          isSelected: $0 == currentRegion
+        )
       }
 
     self.items = [
@@ -69,7 +77,7 @@ extension OnboardingRegionVM: ViewModelWithLocalState {
 extension OnboardingRegionVM {
   enum CellType: Equatable {
     case titleHeader(title: String, description: String)
-    case radio(regionName: String, isSelected: Bool)
+    case radio(regionIdentifier: String, regionName: String, isSelected: Bool)
     case spacer(OnboardingSpacerCellVM.Size)
 
     var cellVM: ViewModel {
@@ -80,8 +88,8 @@ extension OnboardingRegionVM {
       case .spacer(let size):
         return OnboardingSpacerCellVM(size: size)
 
-      case .radio(let ragionName, let isSelected):
-        return OnboardingRadioCellVM(title: ragionName, isSelected: isSelected)
+      case .radio(_, let regionName, let isSelected):
+        return OnboardingRadioCellVM(title: regionName, isSelected: isSelected)
       }
     }
   }

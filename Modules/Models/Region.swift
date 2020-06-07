@@ -17,26 +17,71 @@ import Foundation
 /// Regions in Italy
 /// - seeAlso: https://it.wikipedia.org/wiki/Regione_(Italia)
 public enum Region: String, CaseIterable {
-  case abruzzo = "Abruzzo"
-  case basilicata = "Basilicata"
-  case calabria = "Calabria"
-  case campania = "Campania"
-  case emiliaRomagna = "Emilia-Romagna"
-  case friuliVeneziaGiulia = "Friuli-Venezia Giulia"
-  case lazio = "Lazio"
-  case liguria = "Liguria"
-  case lombardia = "Lombardia"
-  case marche = "Marche"
-  case molise = "Molise"
-  case piemonte = "Piemonte"
-  case puglia = "Puglia"
-  case sardegna = "Sardegna"
-  case sicilia = "Sicilia"
-  case toscana = "Toscana"
-  case trentinoAltoAdige = "Trentino-Alto Adige"
-  case umbria = "Umbria"
-  case valleAosta = "Valle d'Aosta"
-  case veneto = "Veneto"
+  case abruzzo
+  case basilicata
+  case calabria
+  case campania
+  case emiliaRomagna
+  case friuliVeneziaGiulia
+  case lazio
+  case liguria
+  case lombardia
+  case marche
+  case molise
+  case piemonte
+  case puglia
+  case sardegna
+  case sicilia
+  case toscana
+  case trentinoAltoAdige
+  case umbria
+  case valleAosta
+  case veneto
+//    case abruzzo = "Abruzzo"
+//    case basilicata = "Basilicata"
+//    case calabria = "Calabria"
+//    case campania = "Campania"
+//    case emiliaRomagna = "Emilia-Romagna"
+//    case friuliVeneziaGiulia = "Friuli-Venezia Giulia"
+//    case lazio = "Lazio"
+//    case liguria = "Liguria"
+//    case lombardia = "Lombardia"
+//    case marche = "Marche"
+//    case molise = "Molise"
+//    case piemonte = "Piemonte"
+//    case puglia = "Puglia"
+//    case sardegna = "Sardegna"
+//    case sicilia = "Sicilia"
+//    case toscana = "Toscana"
+//    case trentinoAltoAdige = "Trentino-Alto Adige"
+//    case umbria = "Umbria"
+//    case valleAosta = "Valle d'Aosta"
+//    case veneto = "Veneto"
+
+//  public var localizedText: String {
+//    switch self {
+//        case .abruzzo: return L10n.Region.abruzzo
+//        case .basilicata: return L10n.Region.basilicata
+//        case .calabria: return L10n.Region.calabria
+//        case .campania: return L10n.Region.campania
+//        case .emiliaRomagna: return L10n.Region.emiliaRomagna
+//        case .friuliVeneziaGiulia: return L10n.Region.friuliVeneziaGiulia
+//        case .lazio: return L10n.Region.lazio
+//        case .liguria: return L10n.Region.liguria
+//        case .lombardia: return L10n.Region.lombardia
+//        case .marche: return L10n.Region.marche
+//        case .molise: return L10n.Region.molise
+//        case .piemonte: return L10n.Region.piemonte
+//        case .puglia: return L10n.Region.puglia
+//        case .sardegna: return L10n.Region.sardegna
+//        case .sicilia: return L10n.Region.sicilia
+//        case .toscana: return L10n.Region.toscana
+//        case .trentinoAltoAdige: return L10n.Region.trentinoAltoAdige
+//        case .umbria: return L10n.Region.umbria
+//        case .valleAosta: return L10n.Region.valleAosta
+//        case .veneto: return L10n.Region.veneto
+//    }
+//  }
 
   public var provinces: [Province] {
     switch self {
@@ -328,225 +373,6 @@ public extension Province {
       region.provinces.contains(self)
     }
   }
-
-  var humanReadableName: String {
-    switch self {
-    case .agrigento:
-      return "Agrigento"
-    case .alessandria:
-      return "Alessandria"
-    case .ancona:
-      return "Ancona"
-    case .aosta:
-      return "Aosta"
-    case .arezzo:
-      return "Arezzo"
-    case .ascoliPiceno:
-      return "Ascoli Piceno"
-    case .asti:
-      return "Asti"
-    case .avellino:
-      return "Avellino"
-    case .bari:
-      return "Bari"
-    case .belluno:
-      return "Belluno"
-    case .benevento:
-      return "Benevento"
-    case .bergamo:
-      return "Bergamo"
-    case .biella:
-      return "Biella"
-    case .bologna:
-      return "Bologna"
-    case .bolzano:
-      return "Bolzano"
-    case .brescia:
-      return "Brescia"
-    case .brindisi:
-      return "Brindisi"
-    case .cagliari:
-      return "Cagliari"
-    case .caltanissetta:
-      return "Caltanissetta"
-    case .campobasso:
-      return "Campobasso"
-    case .caserta:
-      return "Caserta"
-    case .catania:
-      return "Catania"
-    case .catanzaro:
-      return "Catanzaro"
-    case .chieti:
-      return "Chieti"
-    case .como:
-      return "Como"
-    case .cosenza:
-      return "Cosenza"
-    case .cremona:
-      return "Cremona"
-    case .crotone:
-      return "Crotone"
-    case .cuneo:
-      return "Cuneo"
-    case .enna:
-      return "Enna"
-    case .fermo:
-      return "Fermo"
-    case .ferrara:
-      return "Ferrara"
-    case .firenze:
-      return "Firenze"
-    case .foggia:
-      return "Foggia"
-    case .forliCesena:
-      return "Forlì Cesena"
-    case .frosinone:
-      return "Frosinone"
-    case .genova:
-      return "Genova"
-    case .gorizia:
-      return "Gorizia"
-    case .grosseto:
-      return "Grosseto"
-    case .imperia:
-      return "Imperia"
-    case .isernia:
-      return "Isernia"
-    case .lAquila:
-      return "L\'Aquila"
-    case .laSpezia:
-      return "La Spezia"
-    case .latina:
-      return "Latina"
-    case .lecce:
-      return "Lecce"
-    case .lecco:
-      return "Lecco"
-    case .livorno:
-      return "Livorno"
-    case .lodi:
-      return "Lodi"
-    case .lucca:
-      return "Lucca"
-    case .macerata:
-      return "Macerata"
-    case .mantova:
-      return "Mantova"
-    case .massaECarrara:
-      return "Massa-Carrara"
-    case .matera:
-      return "Matera"
-    case .messina:
-      return "Messina"
-    case .milano:
-      return "Milano"
-    case .modena:
-      return "Modena"
-    case .monzaEBrianza:
-      return "Monza e Brianza"
-    case .napoli:
-      return "Napoli"
-    case .novara:
-      return "Novara"
-    case .nuoro:
-      return "Nuoro"
-    case .oristano:
-      return "Oristano"
-    case .padova:
-      return "Padova"
-    case .palermo:
-      return "Palermo"
-    case .parma:
-      return "Parma"
-    case .pavia:
-      return "Pavia"
-    case .perugia:
-      return "Perugia"
-    case .pesaroEUrbino:
-      return "Pesaro e Urbino"
-    case .pescara:
-      return "Pescara"
-    case .piacenza:
-      return "Piacenza"
-    case .pisa:
-      return "Pisa"
-    case .pistoia:
-      return "Pistoia"
-    case .pordenone:
-      return "Pordenone"
-    case .potenza:
-      return "Potenza"
-    case .prato:
-      return "Prato"
-    case .ragusa:
-      return "Ragusa"
-    case .ravenna:
-      return "Ravenna"
-    case .reggioCalabria:
-      return "Reggio Calabria"
-    case .reggioEmilia:
-      return "Reggio Emilia"
-    case .rieti:
-      return "Rieti"
-    case .rimini:
-      return "Rimini"
-    case .roma:
-      return "Roma"
-    case .rovigo:
-      return "Rovigo"
-    case .salerno:
-      return "Salerno"
-    case .sassari:
-      return "Sassari"
-    case .savona:
-      return "Savona"
-    case .siena:
-      return "Siena"
-    case .siracusa:
-      return "Siracusa"
-    case .sondrio:
-      return "Sondrio"
-    case .taranto:
-      return "Taranto"
-    case .teramo:
-      return "Teramo"
-    case .terni:
-      return "Terni"
-    case .torino:
-      return "Torino"
-    case .trapani:
-      return "Trapani"
-    case .trento:
-      return "Trento"
-    case .treviso:
-      return "Treviso"
-    case .trieste:
-      return "Trieste"
-    case .udine:
-      return "Udine"
-    case .varese:
-      return "Varese"
-    case .venezia:
-      return "Venezia"
-    case .verbaniaCusioOssola:
-      return "Verbano-Cusio-Ossola"
-    case .vercelli:
-      return "Vercelli"
-    case .verona:
-      return "Verona"
-    case .viboValentia:
-      return "Vibo Valentia"
-    case .vicenza:
-      return "Vicenza"
-    case .viterbo:
-      return "Viterbo"
-    case .barlettaAndriaTrani:
-      return "Barletta-Andria-Trani"
-    case .sudSardegna:
-      return "Sud Sardegna"
-    }
-  }
 }
 
 extension Region: Comparable {
@@ -557,6 +383,8 @@ extension Region: Comparable {
 
 extension Province: Comparable {
   public static func < (lhs: Self, rhs: Self) -> Bool {
-    return lhs.humanReadableName < rhs.humanReadableName
+//    problem: L10n can't be used here.
+//    return lhs.humanReadableName < rhs.humanReadableName
+    return lhs.rawValue < rhs.rawValue
   }
 }
